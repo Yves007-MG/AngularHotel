@@ -6,6 +6,18 @@
         {{ showBadge? 'Cacher' : 'afficher' }} nouveau
     </button>
 
+    <div class="my-2">
+        <div class="row">
+            <div class="col-md-4">
+                <span>Filtre actuel :</span>
+                <b>{{ hotelFilter }}</b>
+            </div>
+            <div class="col-md-8">
+                <input type="text" class="form-control" [ngModel]="hotelFilter" (ngModelChange)="hotelFilter = $event" >
+            </div>
+        </div>
+
+    </div>
     <div class="row row-cols-1 row-cols-md-3">
         <div class="col mb-4" *ngFor="let hotel of hotels" >
             <div class="card">
@@ -13,6 +25,7 @@
                 <div class="card-body">
                    <h5 class="card-title">{{hotel.hotelName}}</h5>
                    <p class="card-text">{{hotel.description}}</p>
+                   <p class="card-text">{{hotel.price | currency: 'EUR' : 'symbol':'1.2-2'}}</p>
                    <span class="badge bg-secondary" *ngIf="showBadge">nouveau</span>
                 </div>
             </div>
