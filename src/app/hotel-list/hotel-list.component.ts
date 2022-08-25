@@ -44,5 +44,9 @@ export class HotelListComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  public showBadge!:boolean ;
+  public toogleIsNewBadge():void{
+    this.showBadge = !this.showBadge;
+  }
 
 }
