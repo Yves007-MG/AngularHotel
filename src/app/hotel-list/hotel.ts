@@ -5,6 +5,7 @@ export interface IHotel {
     description: string;
     price: number;
     imageUrl: string ;
+    rating:number;
 
 } 
 
@@ -17,7 +18,7 @@ constructor(
     public description: string,
     public price: number,
     public imageUrl: string,
-
+    public rating: number,
     ){}
 
     getNewPrice(price:number): number{

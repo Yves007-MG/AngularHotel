@@ -3,16 +3,19 @@ import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
+import { StarRatingComponent } from './components/star-rating/star-rating.component';
 import { HotelListComponent } from './hotel-list/hotel-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HotelListComponent
+    HotelListComponent,
+    StarRatingComponent
+
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
 
   ],
   providers: [],
